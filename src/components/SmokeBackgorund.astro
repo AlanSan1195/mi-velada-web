@@ -1,7 +1,8 @@
-<!-- <div id=" smoke-bkg" class="fixed top-0 h-full w-full"></div>
+<div id=" smoke-bkg" class="fixed top-0 h-full w-full"></div>
 
 <script>
-    improt * as THREE from 'three'
+    //importamos la biobleoteca de Three.js
+    import * as THREE from 'three'
 
 
     const $bkg = document.getElementById('smoke-bkg')
@@ -10,12 +11,30 @@
     const h = window.innerHeight
 
     //inicializar Three.js
-    // 3 cosas basiscas: escena, camara, rednderizador
+    // 3 cosas basiscas:   Escena, Camara, Rednderizador
+
+
 
     //Escena
     const scene = new THREE.Scene()
 
 
-    //Camara
-    const camara = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000)
-</script> -->
+    //Camara   el "h" es el frente y la "w" es los lados 1000 es la maxima para que mas ya no s eve esta muy lejos
+    const camara = new THREE.PerspectiveCamera(75, w / h, 1, 1000)
+    //activamos la profundidad deceada 
+    camara.position.z = 10
+    //a esta ecena le agregamos la camara
+    scene.add(camara)
+
+
+    //Renderizador ▶️   HAY DIFERENTES TIPOS PERO USAREMOS EL WEBGL
+    const renderer = new THREE.WebGLRenderer()
+    renderer.setSize(w, h)
+
+    //color de fondo
+    renderer.setClearColor(0x000000, 1)
+
+    $bkg?.appendChild(renderer.domElement)
+
+
+</script>
