@@ -15,22 +15,20 @@
           minute: "2-digit",
         });
 
-        //recuperar zona horaria  
-        const tzOffset = d.getTimezoneOffset() / 60 
-        const diff = tzOffset * -1
-        const gmt = diff > 0 ? `GMT+${diff}` : `GMT-${Math.abs(diff)}`
-        
-        const TZ_DICTIONARY= {
-            "GMT+1": "CET",
-        }
+        //recuperar zona horaria
+        const tzOffset = d.getTimezoneOffset() / 60;
+        const diff = tzOffset * -1;
+        const gmt = diff > 0 ? `GMT+${diff}` : `GMT-${Math.abs(diff)}`;
 
-        const tz = TZ_DICTIONARY[gmt] ?? gmt
+        const TZ_DICTIONARY = {
+          "GMT+1": "CET",
+        };
 
+        const tz = TZ_DICTIONARY[gmt] ?? gmt;
 
-
-        const selfScript = document.currentScript; 
-        selfScript.parentNode.innerHTML= `${date}H  ${tz}`;
-        </script>
+        const selfScript = document.currentScript;
+        selfScript.parentNode.innerHTML = `${date}H  ${tz}`;
+      </script>
     </span>
   </h2>
   <h3 class="uppercase text-2xl font-medium flex flex-col max-w-sm mt-6">
@@ -38,7 +36,8 @@
     <span>Teatro Victoria (Barcelona)</span>
   </h3>
   <a
-    class="border-primary border-2 font-medium text-lg uppercase mt-8 px-4 py-1 hover:bg-secondaty hover:scale-125 transition inline-block"
+    class={`border-primary border-2 font-medium text-lg uppercase mt-8 px-4 py-1 hover:scale-125 hover:bg-slate-300 transition inline-block 
+    `}
     href="https://www.teatrevictoria.com/es/cartelera/c/190_la-velada-del-ano-4.html"
     target="_blank"
     rel="noopener noreferrer"
@@ -46,3 +45,4 @@
     Entradas agotadas
   </a>
 </section>
+ 
