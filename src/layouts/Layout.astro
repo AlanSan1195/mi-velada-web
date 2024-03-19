@@ -16,13 +16,19 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <!-- //centramos toda la pagina -->
+    <div class=" max-w-6xl px-9 pt-40 mx-auto">
+      <slot />
+    </div>
   </body>
 </html>
 <style is:global>
   html {
+    background: #ddd;
     font-family: system-ui, sans-serif;
-    background: #13151a;
     background-size: 224px;
+  }
+  body {
+    font-family: "Jost Variable", sans-serif;
   }
 </style>

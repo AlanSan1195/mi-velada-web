@@ -1,12 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
+import Layout from '@/layouts/Layout.astro';
+// Supports weights 100-900
+import '@fontsource-variable/jost';
+import CountDown from '@/sections/Countdown.astro';
+import Footer from '@/sections/Footer.astro';
+import Hero from '@/sections/Hero.astro';
+import Info from '@/sections/Info.astro';
+import PrincipalData from '@/sections/PrincipalDate.astro';
 ---
 
 <Layout title="Mi velada 4">
+	<Hero />
 	<main>
-		
+		<PrincipalData />
+		<Info />
+		<CountDown />
 	</main>
+	<Footer />		
 </Layout>
 
 
+ 
