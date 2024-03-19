@@ -9,7 +9,7 @@
       rel="noopener noreferrer"
       class="hover:scale-125 hover:opacity-70 transition inline-blocK"
       ><svg
-        class="twich text-primary "
+        class="twich text-twitch "
         width="78"
         height="91"
         fill="none"
@@ -66,6 +66,8 @@
 </section>
 
 <style>
+
+  /* cambiar el color del svg cuando bajas o se acerca mas bien con el scroll  */
   svg {
     view-timeline-name: --twich;
     view-timeline-axis: block;
@@ -76,8 +78,7 @@
 
   @keyframes show {
     to {
-      color: #6441a4;
-      scale: 1.2;
+      @apply text-twitch
     }
   }
 </style>

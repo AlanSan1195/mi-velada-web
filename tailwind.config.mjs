@@ -8,6 +8,7 @@ export default {
       colors: {
         primary: "#333",
         secundary: " #ddd",
+        twitch: "#6441A4",
       },
     },
   },
