@@ -1,4 +1,5 @@
 ---
+import SmokeBackgorund from '@/components/SmokeBackgorund.astro';
 interface Props {
   title: string;
 }
@@ -19,8 +20,9 @@ const { title } = Astro.props;
   <body
     class="[&_:focus-sisible]:outline-none [&_:focus-visisble]:ring-2 [&_:focus-visible]:ring-primary"
   >
+  <SmokeBackgorund />
     <!-- //parece que este es la luz -->
-    <div class="container relative -z-10 mx-autow w-screen overflow-x-clip">
+    <!-- <div class="container relative -z-10 mx-autow w-screen overflow-x-clip">
       <img
         aria-hidden="true"
         src="/lights.svg"
@@ -28,7 +30,8 @@ const { title } = Astro.props;
         onload="this.classList.add('animate-fade-in', 'animate-duration-800')"
         alt="Foco de Luz"
       />
-    </div>
+    </div> -->
+   
     <!-- centramos la pagina -->
     <div class="max-w-6xl px-2 lg:px-10 pt-32 mx-auto">
       <slot />
