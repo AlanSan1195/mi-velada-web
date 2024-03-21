@@ -2,9 +2,24 @@
 import HeroLogo from "@/components/HeroLogo.astro";
 ---
 
-<section class="flex flex-col justify-center items-center font-medium">
-  <span class=" animate-fade-in animate-delay-300 text-xl uppercase text-primary bg-secundary  px-6 py-1 mb-9">
-    Presentación de la
-  </span>
-  <HeroLogo class=" animate-fade-in-up  w-[300px] h-auto md:w-[600px]" />
+<!-- // aprendimos a a darle un efecto de luz a un svg metiendo los dos elementos en un div posisionandolos absolutamente en el div relativo y a cada svg le damos su color y al de abajo el blur -->
+<section class="flex flex-col place-items-center gap-4 lg:gap-9">
+  <h1 class=" text-secundary   text-2xl font bold">Presentacion de la velda del año</h1>
+  <h2 class="font atomic text-secundary -rotate-6 text-3xl font bold ">twitch.tv/ibai</h2>
+  <div class="relative">
+    <img
+      class="absolute inset-0 -z-10 m-auto h-auto w-[400px] scale-[175%]  "
+      src="/imagenes/drawn-x-logo.webp"
+      alt="Logo dibujado a amano de la Velada IV"
+    />
+    <div
+      class="absolute inset-0 m-auto -z-10 size-[200px] rounded-full bg-balck opacity-70 blur-xl"
+    >
+    </div>
+
+    <HeroLogo class="text-secundary h-auto w-[300px] md:w-[500px]" />
+    <HeroLogo
+      class="text-verde/80 blur absolute inset-0 -z-10 w-[300px] h-auto md:w-[500px]"
+    />
+  </div>
 </section>

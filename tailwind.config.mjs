@@ -6,9 +6,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#333",
+        primary: "#222",
         secundary: " #ddd",
         twitch: "#6441A4",
+        verde: "#D5FF00"
       },
     },
   },
