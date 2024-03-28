@@ -1,0 +1,70 @@
+---
+const SPONSOR = [
+  {
+    id: "alsa",
+    name: "Alsa",
+    url: "http://www.alsa.es",
+  },
+  {
+    id: "cerave",
+    name: "Cerave",
+    url: "http://www.cerave.es",
+  },
+  {
+    id: "el-pozo",
+    name: "El Pozo",
+    url: "http://www.elpozo.com",
+  },
+  {
+    id: "grefusa",
+    name: "Grafusa",
+    url: "http://www.grafusa.com",
+  },
+  {
+    id: "maxibon",
+    name: "Maxibon",
+    url: "http://www.maxibon.es",
+  },
+  {
+    id:"prime",
+    name: "Prime",
+    url: "http://www.dirnkprime.com",
+  },
+  {
+    id:"revolut",
+    name: "Revolut",
+    url: "http://www.revolut.com",
+  },
+  {
+    id:"spotify",
+    name: "Spotify",
+    url: "http://www.spotify.com",
+  },
+  {
+    id:"vicio",
+    name: "Vicio",
+    url: "http://www.ganasdevicio.com",
+  }
+
+];
+---
+
+<section class="my-40">
+  <h3 class="text-5xl text-white text-center">PATROCINADORES</h3>
+  <p class="mt-4 text-xl text-neutral-300 text-center">
+    La Velada puede llevarse a cabo gracias a la colaboración de...
+  </p>
+  <div class="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3 ">
+    { 
+      SPONSOR.map(({ id, name, url }) => (
+        <a class="  flex h-24 justify-center items-center  bg-gradient-to-b from-white/10 via-transparent to-transparent md:h-32" title={`Viista la pagina del patrocinador ${name}`} href={url}>
+          <img
+            src={`/imagenes/sponsors/${id}.svg`}
+            alt={`Logo del patrocinador ${name}`}
+            class="h-auto w-30"
+          />
+        </a>
+      ))
+    }
+  </div>
+</section>
