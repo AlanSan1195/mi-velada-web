@@ -1,0 +1,37 @@
+---
+const pages = [
+  { name: " El Evento", href: "/" },
+  { name: "Combates", href: "/combates" },
+  { name: "Pronósticos", href: "/pronosticos" },
+  {
+    name: "Entradas",
+    href: "https://www.entradas.com/artist/la-velada-del-ano/?affiliate=LVL",
+
+    target: "_blank",
+  },
+]
+---
+
+<header class="mb-10  max-w-[100vw] lg:h-24 bg-white/10">
+  <nav class=" flex justify-center justify-between  mx-auto  ">
+    {
+        pages.map(({ name, href, target }) => (
+          <a
+            href={href}
+            target={target}
+            class="text-white text-lg font-bold hover:text-gray-300"
+          >
+            {name}
+          </a>
+        ))
+    }
+
+  </nav>
+</header>
+
+<div class="flex min-h-2 w-full items-center mb-8">
+  <hr
+    class="h-[2px] w-full border-t-0"
+    style="background:linear-gradient(to right, transparent 0%, white 50%, transparent 100%)"
+  />
+</div>

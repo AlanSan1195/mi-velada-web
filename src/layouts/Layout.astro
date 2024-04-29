@@ -2,6 +2,7 @@
 import LightsBackground from '@/components/LightsBackground.astro';
 import NoiseBackground from '@/components/NoiseBackground.astro';
 import SmokeBackgorund from '@/components/SmokeBackgorund.astro';
+import '@fontsource/rock-salt';
 interface Props {
   title: string;
 }
@@ -22,22 +23,22 @@ const { title } = Astro.props;
   <body
     class="dark [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary"
   >
- <LightsBackground/>
+  <LightsBackground/>
   <!-- <NoiseBackground/> -->
   <!-- <SmokeBackgorund /> -->
     <!-- //parece que este es la luz -->
-    <!-- <div class="container relative -z-10 mx-autow w-screen overflow-x-clip">
+   <div class="container relative -z-10 mx-autow w-screen overflow-x-clip">
       <img
         aria-hidden="true"
         src="/lights.svg"
-        class="absolute top-0 w-screen transform-gpu opacity-0 brightness-200 bri md:scale-125 lg:left-0 lsg:scale-100"
+        class="absolute top-0 w-screen transform-gpu opacity-0 brightness-200  md:scale-125 lg:left-0 lsg:scale-100"
         onload="this.classList.add('animate-fade-in', 'animate-duration-800')"
         alt="Foco de Luz"
       />
-    </div> -->
+    </div>
    
     <!-- centramos la pagina -->
-    <div class="mx-auto min-h-screen max-w-6xl px-2 pt-16 selection:bg-primary selection:text-secondary md:pt-20 lg:px-10">
+    <div class=" px-2 pt-16 selection:bg-primary selection:text-secondary md:pt-20 lg:px-10 ">
       <slot />
     </div>
   </body>
@@ -62,57 +63,16 @@ const { title } = Astro.props;
   body {
     font-family: "Jost Variable", sans-serif;
   }
-  
-	@keyframes lights {
-		from {
-			background-position:
-				50% 50%,
-				50% 50%;
-		}
-		to {
-			background-position:
-				350% 50%,
-				350% 50%;
-		}
-	}
+  @font-face {
+    font-family: "inhabits";
+    src: url(/fuentes/inhabits.otf) format("opentype");
+  }
+  @font-face {
+    font-family: 'Rock Salt',;
+    src: url();
+  }
 
-	.lights {
-		--stripesDark: repeating-linear-gradient(
-			100deg,
-			#000 0%,
-			#000 7%,
-			transparent 10%,
-			transparent 12%,
-			#000 16%
-		);
-		--rainbow: repeating-linear-gradient(100deg, var(--color-accent) 10%, var(--color-accent) 30%);
-		background-size: 200%, 400%;
-		background-position:
-			50% 50%,
-			50% 50%;
-
-		background-image: var(--stripesDark), var(--rainbow);
-		filter: blur(10px) opacity(50%) saturate(200%);
-
-		mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
-
-		pointer-events: none;
-		z-index: -20;
-		position: absolute;
-		inset: 0;
-		opacity: 0.5;
-	}
-
-	.lights::after {
-		content: "";
-		position: absolute;
-		inset: 0;
-		background-size: 200%, 100%;
-		animation: lights 80s linear infinite;
-		background-attachment: fixed;
-		mix-blend-mode: difference;
-		background-image: var(--stripesDark), var(--rainbow);
-	}
+	
   
   
 </style>

@@ -11,6 +11,10 @@ export default {
         twitch: "var(--color-twitch)",
         verde: "var(--color-verde)",
       },
+      fontFamily: {
+        cholo: ["Rock Salt"],
+        Atomic: ["inhabits"]
+      },
     },
   },
   plugins: [animations],

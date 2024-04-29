@@ -1,12 +1,15 @@
+---
+import Ubicacion from "@/icons/Ubicacion.astro";
+---
+
 <section
-  class="mt-16 mx-auto flex flex-col justify-center items-center text-center text-primary"
+  class="mt-10 mx-auto flex flex-col justify-center items-center text-center text-primary"
 >
-  <h2 class=" animate-fade-in animate-delay-300 uppercase text-5xl font-semibold textcen">
-    8 de Octubre <span aria-hidden class="hidden md:inline mx-1">.</span><br
-      aria-hidden
-      class="block md:hidden"
-    />
-    <span>
+  <h2
+    class="animate-fade-in animate-delay-300 uppercase text-2xl md:text-5xl font-semibold textcen"
+  >
+    13 de Julio
+    <!-- <span>
       <script is:inline>
         const END_DATE = 17095752000000;
         const d = new Date(END_DATE);
@@ -30,19 +33,27 @@
         selfScript.parentNode.innerHTML = `${date}H  ${tz}`;
       </script>
     </span>
-  </h2>
-  <h3 class="uppercase text-2xl font-medium flex flex-col max-w-sm mt-6">
-    <span>Evento de Presentación</span>
-    <span>Teatro Victoria (Barcelona)</span>
-  </h3>
-  <a
-    class={`border-secundary border-2 font-medium text-lg uppercase mt-8 px-4 py-1 hover:scale-125 hover:bg-slate-700 transition inline-block 
+  </h2> -->
+    <h3 class="uppercase text-1xl md:text-2xl font-medium flex mt-4">
+      <Ubicacion class="size-6 mt- mr-2" />
+
+      <a
+        class=" hover:underline  "
+        href="https://maps.app.goo.gl/F1oAFhFjqnvTKtC18"
+        target="_blank"
+        rel="noopener"
+        aria-label="ubicación del campo Santiago Bernabéu en google maps, se abrirá en una nueva pestaña"
+        >Estadio santiago bernabéu</a
+      >
+    </h3>
+    <a
+      class={`border-secundary border-2 font-medium text-lg uppercase mt-8 px-4 py-1 hover:scale-125 hover:bg-white/20 transition inline-block 
     `}
-    href="https://www.teatrevictoria.com/es/cartelera/c/190_la-velada-del-ano-4.html"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Entradas agotadas
-  </a>
+      href="https://www.entradas.com/artist/la-velada-del-ano/?affiliate=LVL"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Comprar entradas
+    </a>
+  </h2>
 </section>
- 
