@@ -1,4 +1,5 @@
 ---
+import DrawXlogo from "./DrawXlogo.astro"
 const pages = [
   { name: " El Evento", href: "/" },
   { name: "Combates", href: "/combates" },
@@ -12,8 +13,8 @@ const pages = [
 ]
 ---
 
-<header class="mb-10  max-w-[100vw] lg:h-24 bg-white/10">
-  <nav class=" flex justify-center justify-between  mx-auto  ">
+<header class="  max-w-[100vw] lg:h-24 h-16 justify-center content-center  ">
+  <nav class="  group flex justify-between  mx-auto   ">
     {
         pages.map(({ name, href, target }) => (
           <a
@@ -25,6 +26,7 @@ const pages = [
           </a>
         ))
     }
+  
 
   </nav>
 </header>

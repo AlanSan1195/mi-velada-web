@@ -5,7 +5,7 @@ import Ubicacion from "@/icons/Ubicacion.astro";
 <section
   class="mt-10 mx-auto flex flex-col justify-center items-center text-center text-primary"
 >
-  <h2
+  <header
     class="animate-fade-in animate-delay-300 uppercase text-2xl md:text-5xl font-semibold textcen"
   >
     13 de Julio
@@ -32,13 +32,13 @@ import Ubicacion from "@/icons/Ubicacion.astro";
         const selfScript = document.currentScript;
         selfScript.parentNode.innerHTML = `${date}H  ${tz}`;
       </script>
-    </span>
-  </h2> -->
-    <h3 class="uppercase text-1xl md:text-2xl font-medium flex mt-4">
-      <Ubicacion class="size-6 mt- mr-2" />
+    </span>-->
+  </header> 
+    <h3 class="uppercase text-1xl md:text-2xl font-medium flex mt-4 v">
+      <Ubicacion class="size-6 mr-2" />
 
       <a
-        class=" hover:underline  "
+        class=""
         href="https://maps.app.goo.gl/F1oAFhFjqnvTKtC18"
         target="_blank"
         rel="noopener"
@@ -46,14 +46,21 @@ import Ubicacion from "@/icons/Ubicacion.astro";
         >Estadio santiago bernabéu</a
       >
     </h3>
-    <a
-      class={`border-secundary border-2 font-medium text-lg uppercase mt-8 px-4 py-1 hover:scale-125 hover:bg-white/20 transition inline-block 
-    `}
-      href="https://www.entradas.com/artist/la-velada-del-ano/?affiliate=LVL"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Comprar entradas
-    </a>
+
+    <footer class=" scrllo-horizontal mt-6 flex flex-col items-center gap-9 md:flex-row ">
+      <div class=" flex flex-col items-center justify-center gap-y-2 ">
+        <a
+          class="button-style mt-8"
+          aria-disabled="false"
+          href="https://www.entradas.com/artist/la-velada-del-ano/?affiliate=LVL"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="se abrira otra pestaña si las estardas estan agotadas"
+        >
+          <span> Comprar entradas </span>
+        </a>
+        <span class=" text-verde"> !Agotadas¡</span>
+      </div>
+    </footer>
   </h2>
 </section>

@@ -1,8 +1,8 @@
 ---
-import LightsBackground from '@/components/LightsBackground.astro';
-import NoiseBackground from '@/components/NoiseBackground.astro';
-import SmokeBackgorund from '@/components/SmokeBackgorund.astro';
-import '@fontsource/rock-salt';
+import LightsBackground from "@/components/LightsBackground.astro";
+import NoiseBackground from "@/components/NoiseBackground.astro";
+import SmokeBackgorund from "@/components/SmokeBackgorund.astro";
+import "@fontsource/rock-salt";
 interface Props {
   title: string;
 }
@@ -23,28 +23,30 @@ const { title } = Astro.props;
   <body
     class="dark [&_:focus-visible]:outline-none [&_:focus-visible]:ring-2 [&_:focus-visible]:ring-primary"
   >
-  <LightsBackground/>
-  <!-- <NoiseBackground/> -->
-  <!-- <SmokeBackgorund /> -->
+    <LightsBackground />
+    <!-- <NoiseBackground/> -->
+    <!-- <SmokeBackgorund /> -->
     <!-- //parece que este es la luz -->
-   <div class="container relative -z-10 mx-autow w-screen overflow-x-clip">
+    <div class="container relative -z-10 mx-autow w-screen overflow-x-clip">
       <img
         aria-hidden="true"
         src="/lights.svg"
-        class="absolute top-0 w-screen transform-gpu opacity-0 brightness-200  md:scale-125 lg:left-0 lsg:scale-100"
+        class="absolute top-0 w-screen transform-gpu opacity-0 brightness-200 md:scale-125 lg:left-0 lsg:scale-100"
         onload="this.classList.add('animate-fade-in', 'animate-duration-800')"
         alt="Foco de Luz"
       />
     </div>
-   
+
     <!-- centramos la pagina -->
-    <div class=" px-2 pt-16 selection:bg-primary selection:text-secondary md:pt-20 lg:px-10 ">
+    <div
+      class="px-2 selection:bg-primary selection:text-secondary md:pt-20 lg:px-10"
+    >
       <slot />
     </div>
   </body>
 </html>
 <style is:global>
-  :root{
+  :root {
     --color-primary: #ddd;
     --color-secondary: #333;
     --color-verde: #d5ff00;
@@ -52,14 +54,46 @@ const { title } = Astro.props;
     --background-color: #101010;
     --backgroun-twitch: var(--color-twitch-ice);
 
-    --color-twitch: #6441A4;
-    --color-twitch-ice: #f0f0ff
+    --color-twitch: #6441a4;
+    --color-twitch-ice: #f0f0ff;
   }
+  .button-style {
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    width: 18rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    /* le damos el efecto diagonal al boton  */
+    transform: skew(-21deg);
+    /* le damos el efecto diagonal al boton  */
+
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+
+
+  .button-style[aria-disabled="true"] {
+    background: #ddd;
+    color: #111;
+    pointer-events: none;
+    border-color: #ddd;
+  }
+  .button-style span{
+    display: inline-block;
+    transform: skew(21deg);
+  }
+
+
+
+
   html {
     background-color: var(--background-color);
     font-family: system-ui, sans-serif;
-  
   }
+
   body {
     font-family: "Jost Variable", sans-serif;
   }
@@ -68,11 +102,7 @@ const { title } = Astro.props;
     src: url(/fuentes/inhabits.otf) format("opentype");
   }
   @font-face {
-    font-family: 'Rock Salt',;
+    font-family: "Rock Salt";
     src: url();
   }
-
-	
-  
-  
 </style>
