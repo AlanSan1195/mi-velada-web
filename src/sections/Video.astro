@@ -1,0 +1,24 @@
+---
+import DrawXlogo from "@/components/DrawXlogo.astro";
+import LiteYoutube from "@/components/LiteYoutube.astro";
+---
+
+<section
+  class="mt-4   overflow-hidden px-2 pb-48 pt-16 sm:pb-56 sm:pt-32 md:pb-96 md:pt-32"
+>
+  <h3 class="text-3xl text-white text-center">Presentacion</h3>
+  <p
+    class="text-lg text-white text-center mt-4 max-w-[250px] text-wrap mx-auto"
+  >
+    Vuelve a ver la presentación desde el teatro victoria
+  </p>
+
+  <div class="relative mt-8">
+    <DrawXlogo
+      class="absolute inset-0 m-auto -z-10 scale-125"
+      alt=" logo de la velda dibujado a mano"
+    />
+    <LiteYoutube videoId="ct0Hr6zYZGU" 	backgroundImage="https://cdn.lavelada.dev/video-presentation-cover.webp"
+    title="Reproducir presentación de La Velada del Año"/>
+  </div>
+</section>
